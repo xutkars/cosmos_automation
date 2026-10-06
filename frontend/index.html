@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>COSMOS Automation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="header">
+
+            <div>
+                <h1>COSMOS Automation</h1>
+                <p>Insurance proposal automation system</p>
+            </div>
+
+            <div class="status-badge" id="systemStatus">
+                <span class="status-dot"></span>
+                Ready
+            </div>
+
+        </header>
+
+
+        <!-- ================= LOGIN CARD ================= -->
+
+        <section class="card login-card">
+
+            <div class="card-header">
+                <div>
+                    <h2>Login Credentials</h2>
+                    <p>Enter your COSMOS credentials to start automation.</p>
+                </div>
+            </div>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter COSMOS username"
+                        autocomplete="username"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter COSMOS password"
+                        autocomplete="current-password"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="button-row">
+
+                <button
+                    id="startAutomation"
+                    class="btn btn-primary"
+                >
+                    Start Automation
+                </button>
+
+                <button
+                    id="stopAutomation"
+                    class="btn btn-danger"
+                    disabled
+                >
+                    Stop Automation
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROGRESS ================= -->
+
+        <section class="card">
+
+            <div class="card-header">
+
+                <div>
+                    <h2>Automation Progress</h2>
+                    <p id="progressText">
+                        Waiting to start automation.
+                    </p>
+                </div>
+
+                <div id="currentProposal" class="current-proposal">
+                    -
+                </div>
+
+            </div>
+
+
+            <div class="progress-container">
+
+                <div
+                    id="progressFill"
+                    class="progress-fill"
+                    style="width: 0%;"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    Current Page
+                </span>
+
+                <strong id="currentPage">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    Processed
+                </span>
+
+                <strong id="processed">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    Submitted
+                </span>
+
+                <strong id="submitted">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    Errors
+                </span>
+
+                <strong id="errors">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ACTIVITY ================= -->
+
+        <section class="card activity-card">
+
+            <div class="card-header">
+
+                <div>
+                    <h2>Current Activity</h2>
+                    <p>Live automation information</p>
+                </div>
+
+            </div>
+
+
+            <div class="activity-content">
+
+                <div class="activity-icon">
+                    ●
+                </div>
+
+                <div>
+
+                    <h3 id="activityTitle">
+                        Ready
+                    </h3>
+
+                    <p id="activityMessage">
+                        Waiting to start automation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESULTS ================= -->
+
+        <section class="card results-card">
+
+            <div class="card-header">
+
+                <div>
+                    <h2>Automation Results</h2>
+                    <p>Processed proposal information</p>
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Proposal
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Page
+                            </th>
+
+                            <th>
+                                Message
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="resultsTable">
+
+                        <tr>
+
+                            <td colspan="4" class="empty-state">
+                                No results yet.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
