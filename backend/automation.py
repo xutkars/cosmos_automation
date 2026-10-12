@@ -29,6 +29,7 @@ ERROR_TYPES = {
     "NBS-IL-LACLIENT",
     "NBS_PROPOSAL_UPDATION",
     "NBS_STP_PASS",
+    "NBS_QUOTATION_GENERATION",
 }
 
 # Small waits because the application is Angular based
