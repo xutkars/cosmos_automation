@@ -27,6 +27,7 @@ ERROR_TYPES = {
     "NBS-IL-NOMINEE",
     "NBS_REQUIREMENT_CREATION",
     "NBS-IL-LACLIENT",
+    "NBS_PROPOSAL_UPDATION",
 }
 
 # Small waits because the application is Angular based
